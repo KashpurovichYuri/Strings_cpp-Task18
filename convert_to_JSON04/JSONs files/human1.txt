@@ -1,0 +1,11 @@
+{
+    "age": 0,
+    "date of birth": "",
+    "email": "",
+    "gender": 0,
+    "height": 0,
+    "name": "",
+    "phone_number": "",
+    "place of birth": "",
+    "weight": 0
+}
