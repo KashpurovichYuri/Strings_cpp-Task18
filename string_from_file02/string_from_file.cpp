@@ -41,22 +41,24 @@ int main()
 
     // search string if we do not know length of created words.
     std::fstream words("words.txt", std::ios::in);
-    std::stringstream text;
-    text << words.rdbuf();
-    auto code = text.str(); // if I am not using this there will be some garbage?!
+    std::istreambuf_iterator < char > words_it {words};
+    
+    std::string line;
+    std::getline(words, line);
+    auto length_of_line = line.size();
+    words.seekg(0, std::ios::beg);
+    if (*std::next(words_it, length_of_line) == '\r' && *(++words_it) == '\n')
+        length_of_line += 3;
+    else
+        length_of_line += 2;
+    
+    int number_of_line;
+    std::cin >> number_of_line;
+    auto pos = length_of_line * number_of_line;
 
-    auto current = std::begin(code);
-    for ( ; *current != '\n'; ++current);
-    auto length_of_word = std::distance(std::begin(code), current) + 1;
-
-    int number_of_string;
-    std::cin >> number_of_string;
-    int pos = length_of_word * number_of_string;
-
-    text.seekg(pos, std::ios::beg); 
-    std::string ans(length_of_word, '\0');
-    text.read(&ans[0], length_of_word);
-    std::cout << ans << std::endl;
+    words.seekg(pos, std::ios::beg); 
+    std::getline(words, line);
+    std::cout << line << std::endl;
 
     system("pause");
 

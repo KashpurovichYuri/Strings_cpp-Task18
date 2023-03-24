@@ -1,11 +1,11 @@
 {
-    "age": 0,
-    "date of birth": "",
-    "email": "",
-    "gender": 0,
-    "height": 0,
-    "name": "",
-    "phone_number": "",
-    "place of birth": "",
-    "weight": 0
+    "age": 30,
+    "date of birth": "1993",
+    "email": "alex@yandex.ru",
+    "gender": 77,
+    "height": 180,
+    "name": "Alex",
+    "phone_number": "89241567132",
+    "place of birth": "Russia",
+    "weight": 67
 }

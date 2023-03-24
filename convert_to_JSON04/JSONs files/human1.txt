@@ -1,11 +1,11 @@
 {
-    "age": 0,
-    "date of birth": "",
-    "email": "",
-    "gender": 0,
-    "height": 0,
-    "name": "",
-    "phone_number": "",
-    "place of birth": "",
-    "weight": 0
+    "age": 25,
+    "date of birth": "1996",
+    "email": "jh@mail.org",
+    "gender": 77,
+    "height": 180,
+    "name": "Jhon",
+    "phone_number": "1321005",
+    "place of birth": "Australia",
+    "weight": 70
 }

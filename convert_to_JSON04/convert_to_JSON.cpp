@@ -37,7 +37,7 @@ void to_json(json & j, const Human & h)
 	};
 }
 
-std::istream & operator>>(std::istream&  stream, Human human)
+std::istream & operator>>(std::istream&  stream, Human& human)
 {	
 	std::cout << "Enter the name: ";
 	stream >> human.name;
