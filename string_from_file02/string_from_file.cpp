@@ -48,13 +48,13 @@ int main()
     auto length_of_line = line.size();
     words.seekg(0, std::ios::beg);
     if (*std::next(words_it, length_of_line) == '\r' && *(++words_it) == '\n')
-        length_of_line += 3;
-    else
         length_of_line += 2;
+    else
+        length_of_line += 1;
     
     int number_of_line;
     std::cin >> number_of_line;
-    auto pos = length_of_line * number_of_line;
+    auto pos = (++length_of_line) * number_of_line;
 
     words.seekg(pos, std::ios::beg); 
     std::getline(words, line);
